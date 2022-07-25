@@ -1,0 +1,331 @@
+/* ========================== */
+/* ====== Basic Setup ======= */
+/* ========================== */
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+:root {
+  --primary-color: #3f87f5;
+  --text-color-1: #0a0826;
+  --p-color-1: #6c6c6c;
+  --nav-color: #3e3e3e;
+  --h2-color-1: #0a0826;
+  --h2-color-2: #0A0826;
+  --h3-color-1: #231D4F;
+  --packagecolor-1: #848199;
+  --packagecolor-2: rgb(82, 67, 194);
+  --packagecolor-3: #fef5fa;
+}
+
+/* ===== Resusable components ===== */
+
+.btn-custom {
+  background: #ffffff;
+  color: var(--primary-color);
+}
+
+.section-padding {
+  padding: 6.25rem 0;
+}
+
+/* ==== Navbar ====*/
+
+.navbar-brand {
+  font-size: 1.375rem;
+  color: var(--nav-color);
+  font-weight: 700;
+}
+
+.navbar-nav a {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link {
+  color: var(--nav-color);
+}
+
+/* ==== Home Carousel ====*/
+
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 18.75rem;
+}
+
+.carousel-caption {
+  bottom: 20rem;
+  z-index: 2;
+}
+
+.carousel-caption h5 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.carousel-caption p {
+  width: 50%;
+  margin: auto;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.9;
+  margin-top: 2rem;
+}
+
+.w-100 {
+  height: 100vh;
+}
+
+.carousel-indicators {
+  bottom: 3rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 3.125rem;
+}
+
+/* ==== Moment Section ====*/
+
+
+.moment .moment-items{
+    position: relative;
+}
+
+.moment .moment-items h2 {
+  color: var(--h2-color-1);
+  font-size: 2.375rem;
+  font-weight: 700;
+}
+
+.moment .moment-items p {
+    color: var(--p-color-1);
+    font-size: 1rem;
+}
+
+.moment .moment-items .btn-explore:link,
+.moment .moment-items .btn-explore:visited,
+.moment .moment-items .btn-explore:link{
+    background: var(--primary-color);
+    border-radius: 0;
+}
+
+.toast-custom{
+    border-left: 8px solid var(--primary-color);
+    border-radius: 0;
+    position: absolute;
+    top: 75px;
+    right: -220px;
+}
+
+
+
+/* ==== Package Section ==== */
+
+.section-header {
+    margin-bottom: 10rem;
+}
+.section-header h2{
+    font-size: 2.375rem;
+    font-weight: 600;
+    color: var(--h2-color-1);
+}
+
+.package .package-items h3{
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--h3-color-1);
+}
+
+.package .package-items h4{
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--h3-color-1);
+}
+
+.package .package-items p{
+    color: var(--packagecolor-1);
+}
+
+.package .package-items ul li{
+    color: var(--packagecolor-1);
+    margin-bottom: .5rem;
+}
+
+.package .package-items ul li i{
+    color: var(--packagecolor-2);
+    font-size: 1.125rem;
+    margin-right: .5rem;
+}
+
+.package .package-items .btn-plan{
+    background: var(--packagecolor-3);
+    border: var(--packagecolor-3);
+    color: var(--primary-color);
+}
+
+.package-active{
+    background: var(--primary-color);
+    /* transform: scale(1.15,1.15) translateY(-25px); */
+    box-shadow: 0 42px 34px  rgba(63, 135, 245, 25%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== Responsive CSS ====== */
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .carousel-caption {
+    bottom: 20rem;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+  }
+
+  .toast-custom{
+    top: 150px;
+    right: -20px;
+    width: 65%;
+  }
+
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .carousel-caption {
+    bottom: 15rem;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .carousel-indicators {
+    bottom: 0rem;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 2.125rem;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 10%;
+  }
+
+  .carousel-control-next img,
+  .carousel-control-prev img {
+    width: 30%;
+  }
+
+
+  .moment .moment-items h2 {
+    font-size: 2rem;
+  }
+  
+  .toast-custom{
+    top: 160px;
+    right: -10px;
+    width: 85%;
+  }
+
+  .clients .section-header{
+    margin-bottom: 7rem;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .section-padding {
+        padding: 4.25rem 0;
+    }
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .carousel-caption {
+    bottom: 7rem;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+    line-height: 1.5;
+    width: 100%;
+    margin-top: 0.9rem;
+  }
+
+  .carousel-indicators {
+    bottom: 0rem;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 2.125rem;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 10%;
+  }
+
+  .carousel-control-next img,
+  .carousel-control-prev img {
+    width: 30%;
+  }
+
+  .moment .moment-items h2 {
+    font-size: 1.5rem;
+  }
+
+  .toast-custom{
+    top: -5px;
+    right: 30px;
+    width: 60%;
+  }
+  .package-active{
+    margin: 30px 0;
+  }
+
+}
